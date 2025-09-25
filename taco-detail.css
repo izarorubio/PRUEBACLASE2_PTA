@@ -1,0 +1,116 @@
+
+@font-face {
+    font-family: 'Amoria';
+    src: url('RESOURCES/Fonts/AMORIA.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #030226;
+    color: white;
+    line-height: 1.6;
+}
+
+/* HEADER CON IMAGEN DE FONDO */
+.taco-header {
+    position: relative;
+    height: 50vh;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.taco-header .overlay {
+    position: absolute;
+    top:0; left:0; right:0; bottom:0;
+    background: rgba(0,0,0,0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.taco-header h1 {
+    font-family: 'Amoria', Arial, sans-serif;
+    font-size: 3rem;
+    margin-bottom: 10px;
+    text-shadow: 6px 6px 10px #F24484;
+}
+
+/* MAIN CONTENT */
+.taco-main {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+/* INFO SECTION */
+.taco-info h2 {
+    margin-bottom: 15px;
+    color: #F24484;
+    font-size: 2rem;
+}
+
+.taco-info p {
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+.taco-info ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    margin-bottom: 20px;
+}
+
+.taco-info li {
+    margin-bottom: 5px;
+}
+
+/* TAGS */
+.taco-tags {
+    margin: 15px 0;
+}
+
+.taco-tags span {
+    display: inline-block;
+    background: #F24484;
+    color: white;
+    padding: 5px 12px;
+    border-radius: 20px;
+    margin-right: 8px;
+    margin-bottom: 8px;
+    font-size: 0.9rem;
+}
+
+/* BACK BUTTON FIJO */
+.back-button {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 1000;
+    text-decoration: none;
+    color: #fff;
+    background-color: #01072B;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.back-button:hover {
+    background-color: #411073;
+    transform: translateY(-2px);
+}
