@@ -1,0 +1,249 @@
+/* Tipografía personalizada */
+@font-face {
+  font-family: 'Amoria';
+  src: url('RESOURCES/Fonts/AMORIA.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* BODY */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #fff5e6;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* HERO */
+.hero {
+  background: url('RESOURCES/Images/tacosWallpaper.png') center/cover no-repeat;
+  height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  position: relative;
+}
+
+.hero::after {
+  content: '';
+  position: absolute;
+  top:0; left:0;
+  width:100%; height:100%;
+  background-color: rgba(1, 7, 43,0.6);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+}
+
+.hero h1 {
+    font-family: 'Amoria', Arial, sans-serif;
+    font-size: 10rem;
+    margin-bottom: 10px;
+    text-shadow: 6px 6px 10px #F24484;
+}
+
+.hero p {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  text-shadow: 1px 1px 3px #000;
+}
+
+
+/* Imagen sobre el HEADER */
+.hero-image {
+  position: absolute;
+  bottom: 5%;         
+  left: 50%;
+  transform: translateX(-50%);
+  max-height: 60%;      
+  z-index: 2;            /* Para que esté sobre el background */
+  pointer-events: none;  /* Para que no interfiera con clicks */
+}
+
+/* SOBRE NOSOTROS */
+.about {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #01072B;
+    color: white;
+}
+.about h2 {
+    font-family: 'Amoria', Arial, sans-serif;
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: #F24484;
+}
+
+/* GALERÍA TACOS ESTRELLA */
+.gallery {
+  padding: 50px 20px;
+  text-align: center;
+  background-color: #F24484;
+}
+.gallery h2 {
+    font-family: 'Amoria', Arial, sans-serif;
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: #C0F20C;
+}  
+
+.taco-gallery {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.taco-card {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  padding: 10px;
+  width: 180px;
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.taco-card:hover {
+  transform: translateY(-5px);
+}
+
+.taco-card img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+/* SECCIÓN GENERADOR DE TACOS */
+.taco-section {
+  padding: 60px 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  /* Fondo con imagen y overlay */
+  background: 
+    linear-gradient(rgba(242,68,132,1), rgba(0,0,0,0.4)), /* semitono transparente negro */
+    url('RESOURCES/Images/tacosGenerateWallpaper.png') center/cover no-repeat;
+
+}
+
+/* BOTÓN */
+.taco-section button {
+  padding: 15px 35px;
+  font-size: 1.4rem;
+  cursor: pointer;
+  background-color: #01072B;
+  border: none;
+  border-radius: 12px;
+  color: white;
+  margin-bottom: 30px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  transition: all 0.3s ease;
+}
+
+.taco-section button:hover {
+  background-color: #411073;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.35);
+}
+
+/* TARJETA DE RESULTADO */
+.taco-result {
+  background: linear-gradient(145deg, #fff6f9, #ffe6f0);
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  max-width: 600px;
+  width: 100%;
+  text-align: left;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.taco-result:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.3);
+}
+
+/* IMAGEN DENTRO DE TARJETA */
+.taco-result img {
+  max-width: 100%;
+  border-radius: 12px;
+  margin-top: 15px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+/* ENCABEZADOS DENTRO DE TARJETA */
+.taco-result h2 {
+  margin-bottom: 10px;
+  color: #01072B;
+}
+
+.taco-result h3 {
+  margin-top: 15px;
+  margin-bottom: 5px;
+  color: #FF0066;
+}
+
+/* LISTA DE INGREDIENTES */
+.taco-result ul {
+  padding-left: 20px;
+  list-style-type: disc;
+}
+
+.taco-result li {
+  margin-bottom: 5px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .taco-section button {
+    width: 80%;
+    font-size: 1.2rem;
+  }
+
+  .taco-result {
+    width: 90%;
+  }
+}
+
+
+
+/* FOOTER */
+footer {
+  background-color: #01072B;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 3rem;
+  }
+
+  .hero p {
+    font-size: 1.2rem;
+  }
+
+  .taco-gallery {
+    flex-direction: column;
+    align-items: center;
+  }
+}
